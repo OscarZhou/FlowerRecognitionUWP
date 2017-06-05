@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="VisionApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VisionApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Image x:Name="imageControl" Source="Assets\images\images.png" HorizontalAlignment="Center" Height="241" Margin="35,33,25,0" VerticalAlignment="Top"  Width="300"/>
+
+            <TextBlock Name="resultText" MaxLines="1000" HorizontalAlignment="Center" Width="300" Margin="30,280,30,150" FontSize="16">
+                <LineBreak/>
+                <Run x:Name="line1" Foreground="Gray" FontFamily="Segoe UI Light" FontSize="18">
+                    Select a picture or take a photo.
+                </Run>
+                <LineBreak/>
+                <Run x:Name="line2" Foreground="Teal" FontFamily="Georgia" FontSize="18" FontStyle="Italic">
+                    
+                </Run>
+                <LineBreak/>
+                <Run x:Name="line3" Foreground="Black" FontFamily="Arial" FontSize="14" FontWeight="Bold">
+                    
+                </Run>
+            </TextBlock>
+
+
+            <Button x:Name="SelectButton" Content="" HorizontalAlignment="Left" Margin="25,500,0,0" VerticalAlignment="Top" FontSize="16" Click="SelectButton_Click" Height="60" Width="60">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/landscape.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="CaptureButton" Content="" HorizontalAlignment="Left" Margin="145,500,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="CaptureButton_Click">
+                <Button.BorderBrush>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.BorderBrush>
+                <Button.Foreground>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.Foreground>
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/photo-camera-1.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="LibraryButton" Content="" HorizontalAlignment="Left" Margin="275,500,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="LibraryButton_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Assets/Icons/document.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

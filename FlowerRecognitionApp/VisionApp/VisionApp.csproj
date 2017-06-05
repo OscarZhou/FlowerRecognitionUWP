@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{D3571309-6B52-4418-9087-CF16CA0C4FA1}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisionApp</RootNamespace>
+    <AssemblyName>VisionApp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>VisionApp_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\ItemsDataSource.cs" />
+    <Compile Include="DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailPage.xaml.cs">
+      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="VisionApp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Icons\battery-1.png" />
+    <Content Include="Assets\Icons\battery-2.png" />
+    <Content Include="Assets\Icons\battery.png" />
+    <Content Include="Assets\Icons\browser.png" />
+    <Content Include="Assets\Icons\calculator-1.png" />
+    <Content Include="Assets\Icons\calculator.png" />
+    <Content Include="Assets\Icons\camcorder.png" />
+    <Content Include="Assets\Icons\cassette.png" />
+    <Content Include="Assets\Icons\clapperboard.png" />
+    <Content Include="Assets\Icons\cogwheel.png" />
+    <Content Include="Assets\Icons\compact-disc.png" />
+    <Content Include="Assets\Icons\computer-1.png" />
+    <Content Include="Assets\Icons\computer-2.png" />
+    <Content Include="Assets\Icons\computer-3.png" />
+    <Content Include="Assets\Icons\computer-4.png" />
+    <Content Include="Assets\Icons\computer.png" />
+    <Content Include="Assets\Icons\copy.png" />
+    <Content Include="Assets\Icons\document.png" />
+    <Content Include="Assets\Icons\download.png" />
+    <Content Include="Assets\Icons\film-reel.png" />
+    <Content Include="Assets\Icons\focus.png" />
+    <Content Include="Assets\Icons\folder.png" />
+    <Content Include="Assets\Icons\guitar-1.png" />
+    <Content Include="Assets\Icons\guitar-2.png" />
+    <Content Include="Assets\Icons\guitar.png" />
+    <Content Include="Assets\Icons\headphones.png" />
+    <Content Include="Assets\Icons\jack.png" />
+    <Content Include="Assets\Icons\landscape.png" />
+    <Content Include="Assets\Icons\levels.png" />
+    <Content Include="Assets\Icons\lifesaver.png" />
+    <Content Include="Assets\Icons\megaphone.png" />
+    <Content Include="Assets\Icons\microphone-1.png" />
+    <Content Include="Assets\Icons\microphone.png" />
+    <Content Include="Assets\Icons\monitor.png" />
+    <Content Include="Assets\Icons\mouse-1.png" />
+    <Content Include="Assets\Icons\mouse.png" />
+    <Content Include="Assets\Icons\next.png" />
+    <Content Include="Assets\Icons\pendrive.png" />
+    <Content Include="Assets\Icons\photo-camera-1.png" />
+    <Content Include="Assets\Icons\photo-camera-2.png" />
+    <Content Include="Assets\Icons\photo-camera.png" />
+    <Content Include="Assets\Icons\poles-1.png" />
+    <Content Include="Assets\Icons\poles.png" />
+    <Content Include="Assets\Icons\power.png" />
+    <Content Include="Assets\Icons\previous.png" />
+    <Content Include="Assets\Icons\printer.png" />
+    <Content Include="Assets\Icons\projector-1.png" />
+    <Content Include="Assets\Icons\projector-2.png" />
+    <Content Include="Assets\Icons\projector.png" />
+    <Content Include="Assets\Icons\ruler.png" />
+    <Content Include="Assets\Icons\search.png" />
+    <Content Include="Assets\Icons\server.png" />
+    <Content Include="Assets\Icons\smartphone-1.png" />
+    <Content Include="Assets\Icons\smartphone-2.png" />
+    <Content Include="Assets\Icons\smartphone-3.png" />
+    <Content Include="Assets\Icons\smartphone-4.png" />
+    <Content Include="Assets\Icons\smartphone-5.png" />
+    <Content Include="Assets\Icons\smartphone-6.png" />
+    <Content Include="Assets\Icons\smartphone.png" />
+    <Content Include="Assets\Icons\speaker-1.png" />
+    <Content Include="Assets\Icons\speaker-2.png" />
+    <Content Include="Assets\Icons\speaker-3.png" />
+    <Content Include="Assets\Icons\speaker-4.png" />
+    <Content Include="Assets\Icons\speaker.png" />
+    <Content Include="Assets\Icons\speedometer.png" />
+    <Content Include="Assets\Icons\stats.png" />
+    <Content Include="Assets\Icons\tablet-1.png" />
+    <Content Include="Assets\Icons\tablet.png" />
+    <Content Include="Assets\Icons\television-1.png" />
+    <Content Include="Assets\Icons\television-2.png" />
+    <Content Include="Assets\Icons\television-3.png" />
+    <Content Include="Assets\Icons\television.png" />
+    <Content Include="Assets\Icons\usb.png" />
+    <Content Include="Assets\Icons\video-camera-1.png" />
+    <Content Include="Assets\Icons\video-camera.png" />
+    <Content Include="Assets\Icons\video-player-1.png" />
+    <Content Include="Assets\Icons\video-player-2.png" />
+    <Content Include="Assets\Icons\video-player-3.png" />
+    <Content Include="Assets\Icons\video-player.png" />
+    <Content Include="Assets\Icons\webcam.png" />
+    <Content Include="Assets\Icons\wifi-1.png" />
+    <Content Include="Assets\Icons\wifi.png" />
+    <Content Include="Assets\images\images.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CloudVisionAPI\CloudVisionAPI.csproj">
+      <Project>{7f7a553f-2d79-4b65-868c-d5cecf415073}</Project>
+      <Name>CloudVisionAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
