@@ -42,7 +42,7 @@ namespace VisionApp
         private StorageFile imageStorageFile;
 
         private string[] filterArray = { "flower", "plant", "yellow", "red", "white", "flora", "land plant", "flowering plant", "daisy family", "petal", "field", "plant stem", "macro photography",
-            "purple","pink","photography","close up","blossom","black and white","green","annual plant","botany","floristry","biology","leaf","branch",""};
+            "purple","pink","photography","close up","blossom","black and white","green","annual plant","botany","floristry","biology","leaf","branch","tree","shrub","nature","wildflower"};
 
         public MainPage()
         {
